@@ -29,8 +29,8 @@ Route::view('/pagina1','pagina1');
 
 Route::get('/pagina2','Main@mostrarNome');
 
-Route::get('/user/{nome}/{apelido?}', function ($nome, $apelido = ''){
-    echo "Nome: $nome $apelido";
+Route::get('/user/{nome}/{idade}/{apelido?}', function ($nome, $idade, $apelido = ''){
+    echo "Nome: $nome $apelido Idade: $idade";
 });
 
 Route::get('/user/{nome}/{apelido}', function ($nome){
@@ -38,3 +38,9 @@ Route::get('/user/{nome}/{apelido}', function ($nome){
 });
 
 Route::get('/user/{nome}/{apelido}','Main@user');
+
+Route::get('/nome/{nome}/{idade}/{apelido?}','Main@nome');
+
+Route::get('/home', 'Main@home')->name('inicio');
+Route::get('/servicos', 'Main@servicos')->name('servicos');
+Route::get('/contatos', 'Main@contatos')->name('contatos');
