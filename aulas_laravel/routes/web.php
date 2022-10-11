@@ -28,3 +28,13 @@ Route::view('/pagina1','pagina1');
 // Route::view('/pagina2','pagina2',['nome' => 'Juliane Bezerra']);
 
 Route::get('/pagina2','Main@mostrarNome');
+
+Route::get('/user/{nome}/{apelido?}', function ($nome, $apelido = ''){
+    echo "Nome: $nome $apelido";
+});
+
+Route::get('/user/{nome}/{apelido}', function ($nome){
+    echo "Nome: $nome";
+});
+
+Route::get('/user/{nome}/{apelido}','Main@user');

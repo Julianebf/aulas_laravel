@@ -14,7 +14,14 @@ class Main extends Controller
     //     echo 'Estou no user!';
     // }
     
-    public function mostrarNome(){
-         return view('pagina2',['nome' => 'Juliane Bezerra']);
-        }
+    // public function mostrarNome(){
+    //      return view('pagina2',['nome' => 'Juliane Bezerra']);
+    //     }
+    public function user($nome, $apelido){
+        
+        return view('user', [
+            'nome' => $nome,
+            'apelido' => $apelido
+        ]);
+    }
 }
