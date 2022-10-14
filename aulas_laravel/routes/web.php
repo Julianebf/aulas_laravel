@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/teste','Main@index');
 
@@ -24,6 +21,8 @@ Route::get('/user','Main@user');
 Route::view('/pagina','pagina');
 
 Route::view('/pagina1','pagina1');
+
+Route::get('/', 'Main1@home');
 
 // Route::view('/pagina2','pagina2',['nome' => 'Juliane Bezerra']);
 
@@ -44,3 +43,35 @@ Route::get('/nome/{nome}/{idade}/{apelido?}','Main@nome');
 Route::get('/home', 'Main@home')->name('inicio');
 Route::get('/servicos', 'Main@servicos')->name('servicos');
 Route::get('/contatos', 'Main@contatos')->name('contatos');
+
+
+Route::get('clientes','Cliente@index');
+Route::get('clientes_nomes','Cliente@nomes');
+
+Route::get('produtos','Stock\Produtos@index');
+
+Route::get('dados/{a}','Stats');
+
+Route::get('cliente/{index}', 'Clientes@cliente');
+
+
+Route::get('cliente/{index}', 'Clientes@cliente');
+
+Route::get('client/{index?}','Clientes1@client');
+
+Route::get('clients/{dado}/{index?}','Clientes2@clients');
+
+Route::resource('produto', 'Produtos'); 
+
+Route::view('ver', 'pagina');
+
+Route::view('ver1', 'clientes.cliente');
+
+Route::get('ver3', 'Clientes3@pagina');
+
+Route::get('ver4', 'Main2@homepage');
+
+Route::get('ver5', 'Main3@home');
+
+Route::get('/endereco_teste', 'Main3@teste')->name('minha_route');
+

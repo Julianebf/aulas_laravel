@@ -6,33 +6,29 @@ use Illuminate\Http\Request;
 
 class Main extends Controller
 {
-    // public function index(){
-        // echo 'Estou no index!';
-    // }
+    public function index(){
+        echo 'Estou no index!';
+    }
 
-    // public function user(){
-    //     echo 'Estou no user!';
-    // }
-    
-    // public function mostrarNome(){
-    //      return view('pagina2',['nome' => 'Juliane Bezerra']);
-    //     }
-    // public function user($nome, $apelido){
+    public function mostrarNome(){
+         return view('pagina2',['nome' => 'Juliane Bezerra']);
+        }
+    public function user($nome, $apelido){
         
-    //     return view('user', [
-    //         'nome' => $nome,
-    //         'apelido' => $apelido
-    //     ]);
-    // }
+        return view('user', [
+            'nome' => $nome,
+            'apelido' => $apelido
+        ]);
+    }
 
-    // public function nome($nome, $idade,  $apelido = ''){
+    public function nome($nome, $idade,  $apelido = ''){
         
-    //     return view('nome', [
-    //         'nome' => $nome,
-    //         'apelido' => $apelido,
-    //         'idade' => $idade
-    //     ]);
-    // }
+        return view('nome', [
+            'nome' => $nome,
+            'apelido' => $apelido,
+            'idade' => $idade
+        ]);
+    }
 
     public function home(){
         echo'<h3>HOME<h3>';
