@@ -75,3 +75,11 @@ Route::get('ver5', 'Main3@home');
 
 Route::get('/endereco_teste', 'Main3@teste')->name('minha_route');
 
+
+Route::get('ver6', 'Main3@home');
+
+Route::get('ver7', 'Main5@home3');
+
+Route::get('ver8', 'Main6@home4');
+
+
