@@ -82,4 +82,5 @@ Route::get('ver7', 'Main5@home3');
 
 Route::get('ver8', 'Main6@home4');
 
+Route::get('ver9', 'Main14@home');
 
